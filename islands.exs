@@ -22,4 +22,4 @@ defmodule Islands do
   end
 end
 
-Islands.loop(%{"小豆島" => 6, "屋久島" => 6, "種子島" => 6, "軍艦島" => 6, "佐渡島" => 6})
+Islands.loop(%{小豆島: 6, 屋久島: 6, 種子島: 6, 軍艦島: 6, 佐渡島: 6})
