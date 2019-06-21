@@ -13,3 +13,5 @@ while islands.length > 0 do
     islands.delete(island)
   end
 end
+
+puts "席がなくなりました！"
