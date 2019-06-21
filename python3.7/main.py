@@ -6,7 +6,7 @@ islands = {
         "屋久島" : 6,
         "小豆島" : 6,
         "種子島" : 6,
-        "佐渡島" : 6
+        "佐渡島" : 6,
         }
 
 change_dict = islands.copy()
