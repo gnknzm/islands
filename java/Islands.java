@@ -35,6 +35,8 @@ public class Islands {
 				System.out.println(String.format("%sに座りましょう 残り%s席", island, remaining));
 			}
 		}
+
+		System.out.println("席がなくなりました！");
 	}
 }
 
