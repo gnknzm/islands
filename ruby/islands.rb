@@ -6,11 +6,12 @@ while islands.length > 0 do
   line = gets
   island = islands.keys[rand(0..islands.length-1)]
   remaining = islands[island] - 1
-  islands[island] = remaining
   puts "#{island}に座りましょう 残り#{remaining}席"
 
   if remaining <= 0 then
     islands.delete(island)
+  else
+    islands[island] = remaining
   end
 end
 
