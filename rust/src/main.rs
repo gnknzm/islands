@@ -1,4 +1,4 @@
-use rand::seq::SliceRandom;
+use rand::Rng;
 
 struct Island {
     name: String,
@@ -13,9 +13,8 @@ impl Island {
         }
     }
 
-    fn take_seat(&mut self) ->  &mut Island {
+    fn take_seat(&mut self) {
         self.seats = self.seats - 1;
-        self
     }
 }
 
@@ -31,12 +30,12 @@ fn main() {
         let mut s = String::new();
         std::io::stdin().read_line(&mut s).ok();
 
-        islands.shuffle(&mut rng);
-        islands[0].take_seat();
-        println!("{}に座りましょう！ 残り{}席です", islands[0].name, islands[0].seats);
+        let rn = rng.gen_range(0, islands.len());
+        islands[rn].take_seat();
+        println!("{}に座りましょう！ 残り{}席です", islands[rn].name, islands[rn].seats);
 
-        if islands[0].seats <= 0 {
-            islands.remove(0);
+        if islands[rn].seats <= 0 {
+            islands.swap_remove(rn);
             if islands.len() <= 0 {
                 println!("席がなくなりました！");
                 break;
